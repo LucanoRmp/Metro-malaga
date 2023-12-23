@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Gidugu&display=swap');
+
+body{
+	margin: 0;
+	font-family: Gidugu;
+}
+
+.container{
+	display: grid;
+	grid-template-areas: 
+	"num dir dir dir"
+	"main main aside aside"
+	"main main aside aside"
+	"footer footer footer footer";
+	grid-template-rows: 175px 1fr 1fr 100px;
+	grid-template-columns: 200px 250px 1fr;
+	width: 100%;
+	height: 100%;
+}
+
+.line{
+	grid-area: num;
+	display: flex;
+	background: #123;
+	color: #fff;
+	align-items: center;
+	justify-content: center;
+	font-size: 160px;
+}
+
+.diretion{
+	grid-area: dir;
+	display: flex;
+	background: #f30;
+	color: #fff;
+	font-size: 100px;
+	align-items: center;
+	justify-content: center;
+}
+
+.main{
+	grid-area: main;
+	display: flex;
+	align-items: end;
+	flex-direction: column;
+}
+
+.circulo{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	filter: drop-shadow(4px 5px #333);
+	background: #666;
+}
+
+.circulo:first-child{
+	margin-top: 15px;
+}
+
+.circulo:nth-last-child(2){
+	filter: drop-shadow(4px 2px #410);
+	background: #f41;
+}
+
+.palito{
+	width: 10px;
+	height: 25px;
+	background: #666;
+	filter: drop-shadow(3px 3px #333);
+	margin-right: 20px;
+}
+
+.palito:nth-child(2){
+	filter: drop-shadow(3px 3px #333);
+}
+
+.palito:nth-child(4){
+	filter: drop-shadow(3px 3px #333);
+}
+
+.palito:nth-child(3){
+	margin: 10px 20px 10px;
+	height: 20px;
+	filter: drop-shadow(2px 2px #333)
+}
+
+.palito:nth-child(n+16){
+	filter: drop-shadow(3px 2px #410);
+	background: #f41;
+}
+
+.palito:last-child{
+	margin-bottom: 10px;
+}
+
+.aside{
+	grid-area: aside;
+	font-size: 40px;
+}
+
+.parada{
+	display: flex;
+	align-items: center;
+	margin: 0 100px 50px;
+	height: 50px;
+	text-align: center;
+}
+
+.parada:first-child{
+	margin: 15px 100px 90px;
+}
+
+.parada:nth-child(5){
+	display: inline-flex;
+	background: #bbb;
+	padding: 0 20px;
+	box-shadow: 3px 3px #333;
+}
+
+.parada:last-child{
+	color: #0005;
+}
+
+.footer{
+	grid-area: footer;
+	display: flex;
+	background: #f30;
+	color: #fff;
+	font-size: 54px;
+	align-items: center;
+	justify-content: space-around;
+}
